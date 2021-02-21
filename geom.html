@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 90px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FF0000;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 10px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">About</a>
+  <a href="climate.html">Atoll Climate Explorer</a>
+  <a href="geom.html">Atoll Geomorphology Explorer</a>
+  <a href="#Weath">Atoll Weather Explorer</a>
+  <a href="ocean.html">Atoll Ocean Explorer</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="main">
+  <h2>Island Health Explorer</h2>
+  <hr style="height:5px;border-width:0;color:green;background-color:green">
+  <h3>Atoll Geomorphology Explorer</h3>
+  <hr style="height:3px;border-width:0;color:green;background-color:green">
+  <p> The following geomorphological parameters are currently availble to be explored through the apps : </p>
+  <ol>
+  <li>  <a href="geom_area.html">Island Area Explorer</a> <br><i> (Plot and visualize area of individual inhabited islands, 2015-present)</i></li>
+  <li>  <a href="geom_veg_perc.html">Island Vegetation Explorer</a> <br><i> (Plot and visualize the percentage of vegetation for each inhabited island, 2015-present)</i></li>
+  <li> <a href="geom_shoreline.html">Atoll Shoreline Explorer / MSLP Explorer</a> <br><i> (Visualize island shoreline contours for all islands on an atoll scale, 2015-present) </i></li>
+  <li> <a href="geom_classifier.html">Atoll Clasified Features</a> <br><i> (Visualize features of the atoll classified to different categories) </i></li>
+  <li> <a href="geom_bathy.html">Atoll Bathymetry Explorer</a> <br><i> (Explore the bathymetry of the Maldives.). </i></li>
+</ol>
+
+<hr style="height:2px;border-width:0;color:green;background-color:green">
+
+<h4> Example application - Changes to Coastlines and Vegetation </h4>
+<h5> Introduction  </h5>
+
+<p> Since 2010, industrial devolopment at an industrial scale has taken place across the islands, bringing a lot of anthropogenically driven changes to the islands. These include large scale land reclamation of isands as well as lagoons to make way for industrial activities. The vast majority of the islands today have modified coastlines. This change over a short period of time derives a lot of morphological changes, and it is crucial to study these changes to avoid "ufortunate" situations, which had occured such as large scale erosion. Here we explore three scenarios.  
+</p>
+
+<h5> Changes to Coastline and Area in Kudahuvadhoo Island </h5>
+Lets explore some of the changes to area over time across Kudahuvadhoo :
+
+
+<p>Plotting the change in the temporal area over time shows that before major reclamation works prior to 2016, the island area was aproximately 80 Hectares. After the first phase of reclamation which occured between 2016 - 2017, the island land area increased to 120 Hectares. In 2020, after the area of the island stands at about 160 Hectares, nearly twice the size of the island two years ago!
+</p>
+
+<img src="pictures/kudahuvadhoo_area.png" alt="Girl in a jacket" width="500" height="250">
+
+<p>
+  So lets plot the shoreline contours from 2015 - 2018. Here "mean" means that we reduce all images for a given year to a single "mean" image. Becase of the changes brought in a small time frame, using the <a href="geom_shoreline.html">Atoll Shoreline Explorer / MSLP Explorer</a> app, the app allowes the user to enter the specific date and time withour restriction.
+</p>
+
+<img src="pictures/Kud_2015_2018.png" alt="Girl in a jacket" width="500" height="250">
+
+<h5> Changes to Coastline and Area in Maafaru </h5>
+
+<p>Finally, lets plot the variation in vegetation over time across the island of Maafaru <a href="geom_veg_perc.html">Island Vegetation Explorer</a> app. An airport was devoloped on the island which had thick vegetation in 2018. 
+</p>
+
+<img src="pictures/Kud_Veg.png" alt="Girl in a jacket" width="500" height="500">
+
+<p> The contrasting drop in vegetation in 2018 due to the removal of the forested areas to make way for vegetation is striking. Initially, over 40% of the island was vegetated and the vegetation has now dropped to 20% of the total island area.
+</p>
+
+</body>
+</html> 
+
+
+
+    

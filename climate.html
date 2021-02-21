@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 90px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FF0000;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 10px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">About</a>
+  <a href="climate.html">Atoll Climate Explorer</a>
+  <a href="geom.html">Atoll Geomorphology Explorer</a>
+  <a href="#Weath">Atoll Weather Explorer</a>
+  <a href="ocean.html">Atoll Ocean Explorer</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="main">
+  <h2>Island Health Explorer</h2>
+  <hr style="height:5px;border-width:0;color:green;background-color:green">
+  <h3>Atoll Climate Explorer</h3>
+  <hr style="height:3px;border-width:0;color:green;background-color:green">
+  <p> Currently the following climatic variables are offered to be explored : </p>
+  <ol>
+  <li>  <a href="clim_temp.html">Atoll Daily Temperature Explorer</a> <br><i>Minimum and Maximum temperature time series for each administrative atoll (1980 - Present)</i></li>
+  <li> <a href="clim_spres.html">Atoll Surface Pressure / MSLP Explorer</a> <br><i> (Minimum and Maximum temperatures for each administrative atoll, 1980 - Present) </i></li>
+  <li> <a href="clim_prec.html">Atoll Precipitation Explorer</a> <br><i> (Rainfall averages for each administrative atoll, 1980 - Present) </i></li>
+  <li> <a href="clim_wind.html">Atoll Wind Explorer</a> <br><i> (Wind speed and direction for the region, 1980 - Present) </i></li>
+</ol>
+
+<hr style="height:2px;border-width:0;color:green;background-color:green">
+
+<h4> Example application - Climatic Zones according to precipitation </h4>
+<h5> Introduction  </h5>
+<p> 
+  Rain fall across the Atolls is well understood to be influenced by the Monsoonal patterns of the South Asian Subcontinent <a href="http://saruna.mnu.edu.mv/jspui/Hobitstream/123456789/123/1/Dr.%20Zahid%20PHD%20Thesis.pdf">(Zahid, 2011).</a> Further, gauge data from MMS shows that the rainfall increases towards the South. Given that difference in rainfall patterns particularly in the tropics can give rise to the existence of different subdivisions of climactic regions, his raises a plausible question to further explore rainfall patterns across the Atolls to see if we can infer additional patterns. So lets see how we can achieve  this! 
+</p>
+
+<h5> Accessing the Data  </h5>
+
+<p> 
+  To analyse rainfall data, we need access to high quality long term rainfall gauge data. However, the atolls have a few observational posts, spread across a large area. And even this data is not accessible  on the public domain. It is here that we can harness the accessibility  of GEE. We use the <a href="https://zubba1989.users.earthengine.app/view/climaterainfall">Atoll Precipitation Explorer</a> app and it takes only a few clicks to export long term rainfall data. The app utilizes  the <a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5</a> dataset, and we use daily aggregates of rainfall from 1980 - 2019. We export data for each atoll using the "Atoll rainfall explorer" app, which exports the data in csv format, which can be processed using your favorite  data analysis tool directly. So let's see what we can do with the data. 
+</p>
+
+
+<h5>   Which months produce the most rainfall ? </h5>
+
+<p>
+  As our exported csv files already contains the mean rainfall over three decades for each month across the atolls, lets plot the variance of rainfall across some of the atolls. To make things interesting  we will add the monthly minimum threshold of rainfall to qualify as a <a href="https://en.wikipedia.org/wiki/Tropical_rainforest_climate">"Tropical Rain Forest Climate"</a> zone.
+</p>
+
+<img src="pictures/Prec_Monthly.png" alt="Girl in a jacket" width="800" height="300">
+
+<p>
+  The plot is really intretsing as it shows that the rainfall across the Central-Southern and Southern atolls clerly indicates that these atolls experience a much shorter "dry" season and these atolls experience a "Tropical Rain Forest Climate", unlike the Nothern Atolls.
+</p>
+
+<h5>   Which atoll recives the most rainfall ? </h5>
+
+<p>
+  A plausible question that can be asked now is to explore the variance of total rainfall across the country. As we already have exported the csv files of the mean total rainfall across all months for  each atoll it is trivial to plot the total rainfall across the country for each atoll.  
+</p>
+
+  <img src="pictures/Precp_Rates_Maldives.png" alt="Girl in a jacket" width="350" height="500">
+
+<p>
+  The rainfall rates of each atoll plotted shows that the three atolls of the South-Central zone experience the highest rainfall, with Hadhunmathi (Laamu Atoll), experiencing the most, inline with studies such as <a href="http://saruna.mnu.edu.mv/jspui/Hobitstream/123456789/123/1/Dr.%20Zahid%20PHD%20Thesis.pdf">(Zahid, 2011).</a> Lets go one step further and classify the atolls according to the climatic zones.
+</p>
+
+<h5>   Climate zones across the country </h5>
+
+<p>
+  Further analysis of the rainfall paterns over the past three decades indicates three climatic zones within the country as seen below.
+
+</p>
+
+<img src="pictures/Precp_Rate_Clim_zones_mv.png" alt="Girl in a jacket" width="350" height="500">
+
+
+</body>
+</html> 
+
+
+
+    
