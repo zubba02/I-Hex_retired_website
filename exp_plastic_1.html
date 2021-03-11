@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 90px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: grey;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FF0000;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 18px; /* Increased text to enable scrolling */
+  padding: 10px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="index.html">About</a>
+  <a href="climate.html">Atoll Climate Explorer</a>
+  <a href="geom.html">Atoll Geomorphology Explorer</a>
+  <a href="#Weath">Atoll Weather Explorer</a>
+  <a href="ocean.html">Atoll Ocean Explorer</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="main">
+  <h2>Island Health Explorer</h2>
+
+  <hr style="height:5px;border-width:0;color:green;background-color:green">
+
+  <h3>Detection of Floating Plastics (Experimental)</h3>
+
+  <h4>Identification of plastic and marine litter is a new frontier in the application of sattelite imagery. Here we attempt to identify potential targets on the ocean surface across the Southern half of North Male' atoll and South Male' atoll, with Sentinel-2 high resolution imagery using the Plastic Index <a href="https://www.mdpi.com/2072-4292/12/16/2648/htm">(Themistocleous. et.al, 2020)</a> and the Floating Debri Index <a href="https://www.nature.com/articles/s41598-020-62298-z">(Biermann. et.al, 2020).</a> . Initial results presnt here shows that it is viable even in an atoll contest, identfying targets such as speed boats and potentially floating pastic as well. However further refinement and study is needed to make a complete assesment.</h4>
+
+  <hr style="height:3px;border-width:0;color:green;background-color:green">
+
+
+  <iframe src="https://zubba1989.users.earthengine.app/view/plastic1" height=800px width=100% style="border:5px solid green;" title="Iframe Example"></iframe>
+
+</div>
+</body>
+</html> 
+
+
+
+    
