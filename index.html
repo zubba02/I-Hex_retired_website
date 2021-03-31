@@ -14,16 +14,30 @@
     <a href="index.html#home" class="w3-bar-item w3-button"><b>IHE</b> Island Health Explorer</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Support Tools</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#FAQ" class="w3-bar-item w3-button">FAQ</a>
+    	<div class="w3-dropdown-hover">
+    		<button class="w3-bar-item w3-button">Support Tools</button>
+    		    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="index.html#clim" class="w3-bar-item w3-button">Atoll Climate Explorer</a>
+      <a href="index.html#geom" class="w3-bar-item w3-button">Atoll Geomorphology Explorer</a>
+      <a href="index.html#ocean" class="w3-bar-item w3-button">Atoll Ocean Explorer</a>
+      <a href="index.html#future" class="w3-bar-item w3-button">Atoll Future Scenarios Explorer</a>
     </div>
+    </div>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="FAQ.html" class="w3-bar-item w3-button">FAQ</a>
   </div>
+</div>
 </div>
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="front1.jpg" alt="Architecture" width="1500" height="800">
+  <video width = "1500" height = "800" autoplay muted>
+      <source id="vsrc" type="video/mp4">
+      Please update your browser.
+    </video>
+      <script>
+    document.getElementById("vsrc").src = Math.floor((Math.random()*3)+1) + ".mp4";
+  </script>
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-blue w3-opacity-min"><b>IHE</b></span> <span class="w3-hide-small w3-text-black">Island Health Explorer</span></h1>
   </div>
@@ -36,167 +50,209 @@
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>The project aims to create a “one-stop shop” that gathers and interprets island-specific data across tropical regions, providing a freely accessible tool to policymakers and to the population equally ensuring transparency of information between stakeholders. The project currently focuses on the central Indian ocean regions of the Maldives and Chagos but could, with support, be rolled out to any other islands with tailored specificity. The tools provided are based on the Google Earth Engine, exploits nearly 40 years of remote sensing products from a variety of satellite platforms, as well as the latest global climate model forecasts. </br>
+    <p>The project aims to create a “one-stop shop” that gathers and interprets island-specific data across tropical regions, providing a freely accessible tool to policymakers and to the population equally ensuring transparency of information between stakeholders. The project currently focuses on the central Indian ocean regions of the Maldives but could, with support, be rolled out to any other islands with tailored specificity. The tools provided are based on the Google Earth Engine, exploits nearly 40 years of remote sensing products from a variety of satellite platforms, as well as the latest global climate model forecasts. </br>
 
+    <hr style="height:5px;border-width:0;color:white;background-color:white">
 
     This project is in collaboration with Imperial College London, Maldives National University and the Banyan Tree Foundation.
     </p>
   </div>
 
+  <div class="w3-content w3-padding" style="max-width:1564px">
+
+
+  <!-- Contributors Section -->
+  <div class="w3-container w3-padding-32" id="contrib">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">The Team</h3>
+    <p>The project uses all open source tools, and the code is accessible on github. We welcome any contribution in terms of data, code in anyway possible. </br>
+    </p>
+    <h5> Current Contributors </h5>
+    <p>The project is brought to you by : </br>
+    </p>
+
+    <ul>
+  <li>ADVISORS
+    <ul>
+      <li><a href="https://www.imperial.ac.uk/people/y.plancherel">Dr.Yves Plancherel</a></li>
+      <li><a href="https://www.imperial.ac.uk/people/m.d.piggott">Prof. Matthew Piggot</a></li>
+      <li><a href="https://www.imperial.ac.uk/people/p.j.mason">Dr. Phillippa J Mason</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr style="height:0px;border-width:0;color:white;background-color:white">
+
+<ul>
+  <li>DEVOLOPERS
+    <ul>
+      <li>Ellyess Benmoufok</li>
+      <li>Hayley Firth</li>
+      <li>Shuaib Rasheed</li>
+      <li>Ophélie Meuriot</li>
+      <li>Helen  Situ</li>
+      <li>Sequoia Trevor</li>
+    </ul>
+  </li>
+</ul>
+    
+  </div>
   
     <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Support Tools</h3>
     <p> Tools are grouped to different categories, and each tool each contain instructions of how to use. For ideas on how to use the tools we recommend visiting the FAQ page. 
      </p>
-     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Atoll Climate Explorer</h4>
+     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="clim">Atoll Climate Explorer</h4>
   
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_1.html">Atoll Daily Temperature Explorer</a></div>
-        <img src="im1.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_1.html" class="w3-hover-text-black">Atoll Daily Temperature Explorer</a></div>
+        <img src="atoll-dailytemp.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_2.html">Atoll Surface Pressure / MSLP Explorer</a></div>
-        <img src="im2.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_2.html" class="w3-hover-text-black">Atoll Surface Pressure / MSLP Explorer</a></div>
+        <img src="IMG_9151.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_3.html">Atoll Precipitation Explorer</a></div>
-        <img src="im3.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_3.html" class="w3-hover-text-black">Atoll Precipitation Explorer</a></div>
+        <img src="IMG_3544.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_4.html">Atoll Wind Explorer</a></div>
-        <img src="im4.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-blue w3-padding"><a href="clim_4.html" class="w3-hover-text-black">Atoll Wind Explorer</a></div>
+        <img src="IMG_3539.jpg" alt="House" style="width:100%">
       </div>
     </div>
   </div>
 
 
-    <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+    <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="geom">
 Atoll Geomorphology Explorer</h4>
 
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_1.html">Island Area Explorer</a></div>
-        <img src="im5.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_1.html" class="w3-hover-text-black">Island Area Explorer</a></div>
+        <img src="islandareaexp.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_2.html">Island Vegetation Explorer</a></div>
-        <img src="im6.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_2.html" class="w3-hover-text-black">Island Vegetation Explorer</a></div>
+        <img src="vegtation.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_3.html">Atoll Shoreline Explorer</a></div>
-        <img src="im7.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_3.html" class="w3-hover-text-black">Atoll Shoreline Explorer</a></div>
+        <img src="shoreline.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_4.html">Atoll Annual Shoreline Explorer</a></div>
-        <img src="im8.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_4.html" class="w3-hover-text-black">Atoll Annual Shoreline Explorer</a></div>
+        <img src="shore2.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_5.html">Atoll Clasified Features</a></div>
-        <img src="im9.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_5.html" class="w3-hover-text-black">Atoll Clasified Features</a></div>
+        <img src="atollclassified1.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_6.html">Atoll Clasified Features (Expanded)</a></div>
-        <img src="im10.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_6.html" class="w3-hover-text-black">Atoll Clasified Features (Expanded)</a></div>
+        <img src="class2.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_7.html">Atoll Bathymetry Explorer</a></div>
-        <img src="im1.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-red w3-padding"><a href="geom_7.html" class="w3-hover-text-black">Atoll Bathymetry Explorer</a></div>
+        <img src="bathy.jpg" alt="House" style="width:100%">
       </div>
     </div>
   </div>
 
-  <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+  <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="ocean">
 Atoll Ocean Explorer</h4>
 
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_1.html">Atoll SST Temperature Explorer</a></div>
-        <img src="im3.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_1.html" class="w3-hover-text-black">Atoll SST Temperature Explorer</a></div>
+        <img src="sst0.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_2.html">Atoll Cholorophyll Explorer</a></div>
-        <img src="im6.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_2.html" class="w3-hover-text-black">Atoll Cholorophyll Explorer</a></div>
+        <img src="ssd2.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_3.html">Atoll Monthly Surface Sea Water Temperature Explorer</a></div>
+        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_3.html" class="w3-hover-text-black">Atoll Monthly Surface Sea Water Temperature Explorer</a></div>
         <img src="im8.png" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_4.html">Atoll Interannual Surface Sea Water Temperature Explorer</a></div>
-        <img src="im2.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-cyan w3-padding"><a href="ocean_4.html" class="w3-hover-text-black">Atoll Interannual Surface Sea Water Temperature Explorer</a></div>
+        <img src="IMG_1895.jpg" alt="House" style="width:100%">
       </div>
     </div>
   </div>
 
-<h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">
+<h4 class="w3-border-bottom w3-border-light-grey w3-padding-16" id="future">
 Atoll Future Scenarios and Experimental Features</h4>
 
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_1.html">Atoll Future Maximum Near Surface Air Temperature Explorer</a></div>
-        <img src="im4.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_1.html" class="w3-hover-text-black">Atoll Future Maximum Near Surface Air Temperature Explorer</a></div>
+        <img src="future1.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_2.html">Atoll Future Precipitation Explorer</div>
-        <img src="im5.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_2.html" class="w3-hover-text-black">Atoll Future Precipitation Explorer</div>
+        <img src="future2.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_3.html">Detection of Plastic targets</div>
-        <img src="im7.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_3.html" class="w3-hover-text-black">Detection of Plastic targets</div>
+        <img src="plastic.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_4.html">Identification of ship tracks</div>
-        <img src="im9.png" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-purple w3-padding"><a href="future_4.html" class="w3-hover-text-black">Identification of ship tracks</div>
+        <img src="ship.jpg" alt="House" style="width:100%">
       </div>
     </div>
   </div>
-
 </div>
 
-
 <!-- Footer -->
-<footer class="w3-center w3-grey w3-padding-16">
-  <p><a href="#home" title="ISLAND HEALTH INDEX PROJECT" target="_blank" class="w3-hover-text-green">ISLAND HEALTH INDEX PROJECT</a></p>
+<footer class="w3-center w3-blue w3-padding-15">
+  <p><a href="#home" title="ISLAND HEALTH INDEX PROJECT" target="_blank" class="w3-hover-text-black">ISLAND HEALTH EXPLORER PROJECT</a></p>
+  <a href="mailto:s.rasheed18@imperial.ac.uk">s.rasheed18@imperial.ac.uk</a></p>
+  <img src="MNU.jpg" alt="Table" style="width:150px">
+  <img src="Imperial_College_London_Logo_blue.png"  class="w3-panel w3-padding-15" alt="Table" style="width:330" >
+  <img src="Banyan-Tree.png"  class="w3-panel w3-padding-15" alt="Table" style="width:200">
+  <p>2021</p>
 </footer>
 
 </body>
